@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 348px;
+  border: 1px solid lightgray;
+  border-radius: 7px;
+  padding: 8px  16px;
+  margin: 10px 0; 
+}
+.card div {
+  display: flex;
+  align-self: center;
+  gap: 8px;
+  width: 120px;
+  flex-shrink: 0;
+  
+   /* Impede que o texto vaze se for muito grande */
+}
+.card img{
+  width: 138px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid rgb(116, 10, 10);
+}
+.card  strong {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  white-space: normal; 
+
+   width: 100%; /* Faz o texto ocupar todo o espaço da div acima */
+  font-size: 14px; /* Ajuste conforme necessário */
+ 
+}
+
+.btn {
+  background-color: blue;
+  color: white;             /* Garante que o texto fique branco */
+  border: none;              /* Remove a borda padrão que causa o efeito "quadrado" */
+  border-radius: 8px;        /* Arredonda os cantos para combinar com o design */
+  cursor: pointer;
+  
+  /* Faz o botão se ajustar ao texto */
+  width: max-content;        /* Força o botão a ter o tamanho do texto */
+  flex-shrink: 0;            /* Impede que o flexbox "esmague" o botão */
+  
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.seguindo{
+    background-color:  rgb(116, 10, 10);
+}
+.ocultar{
+  position: fixed;
+  margin-bottom: 500px;
+  margin-left: 100px;
+  
+}
