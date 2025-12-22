@@ -10,3 +10,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.btn-red {
+  background-color: red;
+  padding: 16px;
+  border-radius: 50%;
+}

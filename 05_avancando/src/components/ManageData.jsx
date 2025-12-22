@@ -6,7 +6,9 @@ const ManageData = () => {
   return (
     <div>
       <p>
-        <strong>Soma de 356 + 456 = {number}</strong>
+        <strong className={number ? "btn-red" : ""}>
+          Soma de 356 + 456 = {number}
+        </strong>
       </p>
       <button onClick={() => serNumber(356 + 456)}> Ver resultado </button>
     </div>
