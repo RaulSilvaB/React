@@ -16,4 +16,5 @@ const SomarNumeros = () => {
     )
 }
 
-export default SomarNumeros
+
+export default SomarNumeros;
