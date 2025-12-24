@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import "./App.css";
 import img from "./assets/city.jpg";
 import ConditionalRender from "./components/ContionalReader";
@@ -6,6 +6,9 @@ import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import ShowUseName from "./components/ShowUseName";
 import CarDetails from "./components/CarDetails";
+import SemPai from "./components/SemPai";
+import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 
 function App() {
   const name = "Raul";
@@ -16,6 +19,10 @@ function App() {
     { id: 2, marca: "lamboghini", km: 9784, cor: "LARANJA", novo: false },
     { id: 3, marca: "posche", km: 0, cor: "VERDE", novo: true },
   ];
+
+  function ShowMessage(){
+    console.log("função executada")
+  }
 
   return (
     <div className="app">
@@ -42,12 +49,22 @@ function App() {
 
       {cars.map((car) => (
         <CarDetails
+          key={car.id}
           marca={car.marca}
           km={car.km}
           cor={car.cor}
           novo={car.novo}
         />
       ))}
+      <SemPai/>
+
+      <Container valor={"10mil"} >
+        <p>fiho</p>
+        <p>sobrinho</p>
+     </Container>
+
+      <ExecuteFunction Myfunction={ShowMessage}/>
+
     </div>
   );
 }
