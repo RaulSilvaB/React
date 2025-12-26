@@ -9,6 +9,9 @@ import CarDetails from "./components/CarDetails";
 import SemPai from "./components/SemPai";
 import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
+import Message from "./components/Message";
+import ChangeMessageState from "./components/ChangeMessageState";
+import UserDetails from "./components/UserDetails";
 
 function App() {
   const name = "Raul";
@@ -23,6 +26,17 @@ function App() {
   function ShowMessage(){
     console.log("função executada")
   }
+
+  const [message,setMessage] = useState("")
+
+  const handleMesssage = (msg) =>{
+    setMessage(msg)
+  }
+
+  const usuarios = [
+    {id:1, nome: "vivian", idade:  12},
+    {id:2, nome: "king-kong", idade: 19}
+  ]
 
   return (
     <div className="app">
@@ -65,6 +79,16 @@ function App() {
 
       <ExecuteFunction Myfunction={ShowMessage}/>
 
+      <Message msg={message}/>
+      <ChangeMessageState handleMesssage={handleMesssage}/>
+
+    <UserDetails nome ="raul" idade={18} />
+    {usuarios.map((user) => (
+      <UserDetails
+      key={user.id}
+      nome={user.nome}
+      idade={user.idade}/>
+    ))}
     </div>
   );
 }
